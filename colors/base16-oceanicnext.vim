@@ -338,7 +338,7 @@ call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl", s:gui0E)
 
 " Ale highlighting
 call <sid>hi("ALEErrorSign",   s:gui00, s:gui08, s:cterm00, s:cterm08, "", "")
-call <sid>hi("ALEWarningSign", s:gui00, s:gui0A, s:cterm00, s:cterm10, "", "")
+call <sid>hi("ALEWarningSign", s:gui00, s:gui0A, s:cterm00, s:cterm01, "", "")
 
 " Remove functions
 delf <sid>hi
