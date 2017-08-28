@@ -52,6 +52,7 @@ let s:cterm08 = "01"
 let s:cterm0A = "03"
 let s:cterm0B = "02"
 let s:cterm0C = "06"
+
 let s:cterm0D = "04"
 let s:cterm0E = "05"
 if exists('base16colorspace') && base16colorspace == "256"
@@ -337,7 +338,7 @@ call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl", s:gui0E)
 
 " Ale highlighting
 call <sid>hi("ALEErrorSign",   s:gui00, s:gui08, s:cterm00, s:cterm08, "", "")
-call <sid>hi("ALEWarningSign", s:gui0D, s:gui01, s:cterm0D, s:cterm01, "", "")
+call <sid>hi("ALEWarningSign", s:gui00, s:gui0A, s:cterm00, s:cterm10, "", "")
 
 " Remove functions
 delf <sid>hi
