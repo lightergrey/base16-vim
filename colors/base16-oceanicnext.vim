@@ -15,6 +15,7 @@ if !has('gui_running')
 endif
 
 " GUI color definitions
+" Darkest
 let s:gui00 = "1B2B34"
 let s:gui01 = "343D46"
 let s:gui02 = "4F5B66"
@@ -23,13 +24,23 @@ let s:gui04 = "A7ADBA"
 let s:gui05 = "C0C5CE"
 let s:gui06 = "CDD3DE"
 let s:gui07 = "D8DEE9"
+" Lightest
+
+" Red
 let s:gui08 = "EC5f67"
+" Orange
 let s:gui09 = "F99157"
+" Yellow
 let s:gui0A = "FAC863"
+" Green
 let s:gui0B = "99C794"
+" Teal
 let s:gui0C = "5FB3B3"
+" Blue
 let s:gui0D = "6699CC"
+" Purple
 let s:gui0E = "C594C5"
+" Brown
 let s:gui0F = "AB7967"
 
 " Terminal color definitions
