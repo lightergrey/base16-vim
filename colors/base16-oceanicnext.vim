@@ -337,8 +337,9 @@ call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl", s:gui0E)
 " lightergrey additions:
 
 " Ale highlighting
-call <sid>hi("ALEErrorSign",   s:gui00, s:gui08, s:cterm00, s:cterm08, "", "")
-call <sid>hi("ALEWarningSign", s:gui00, s:gui0A, s:cterm00, s:cterm01, "", "")
+" fg bg fg bg 
+call <sid>hi("ALEErrorSign",   s:gui08, s:gui00, s:cterm08, s:cterm00, "", "")
+call <sid>hi("ALEWarningSign", s:gui0A, s:gui00, s:cterm01, s:cterm00, "", "")
 
 " Remove functions
 delf <sid>hi
