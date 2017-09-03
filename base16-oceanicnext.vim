@@ -94,7 +94,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "foo"
+let g:colors_name = "base16-oceanicnext"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
