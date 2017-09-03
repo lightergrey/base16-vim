@@ -2,35 +2,40 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Chalk scheme by Chris Kempson (http://chriskempson.com)
+" OceanicNext scheme by https://github.com/voronianski/oceanic-next-color-scheme
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
 " User must set this variable in .vimrc
 "   let g:base16_shell_path=base16-builder/output/shell/
-if !has('gui_running')
-  if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-chalk.sh"
-  endif
-endif
-
 " GUI color definitions
-let s:gui00 = "151515"
-let s:gui01 = "202020"
-let s:gui02 = "303030"
-let s:gui03 = "505050"
-let s:gui04 = "b0b0b0"
-let s:gui05 = "d0d0d0"
-let s:gui06 = "e0e0e0"
-let s:gui07 = "f5f5f5"
-let s:gui08 = "fb9fb1"
-let s:gui09 = "eda987"
-let s:gui0A = "ddb26f"
-let s:gui0B = "acc267"
-let s:gui0C = "12cfc0"
-let s:gui0D = "6fc2ef"
-let s:gui0E = "e1a3ee"
-let s:gui0F = "deaf8f"
+" Darkest
+let s:gui00 = "1B2B34"
+let s:gui01 = "343D46"
+let s:gui02 = "4F5B66"
+let s:gui03 = "65737E"
+let s:gui04 = "A7ADBA"
+let s:gui05 = "C0C5CE"
+let s:gui06 = "CDD3DE"
+let s:gui07 = "D8DEE9"
+" Lightest
+
+" Red
+let s:gui08 = "EC5f67"
+" Orange
+let s:gui09 = "F99157"
+" Yellow
+let s:gui0A = "FAC863"
+" Green
+let s:gui0B = "99C794"
+" Teal
+let s:gui0C = "5FB3B3"
+" Blue
+let s:gui0D = "6699CC"
+" Purple
+let s:gui0E = "C594C5"
+" Brown
+let s:gui0F = "AB7967"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -41,6 +46,7 @@ let s:cterm08 = "01"
 let s:cterm0A = "03"
 let s:cterm0B = "02"
 let s:cterm0C = "06"
+
 let s:cterm0D = "04"
 let s:cterm0E = "05"
 if exists('base16colorspace') && base16colorspace == "256"
@@ -61,22 +67,22 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#151515"
-  let g:terminal_color_1 =  "#fb9fb1"
-  let g:terminal_color_2 =  "#acc267"
-  let g:terminal_color_3 =  "#ddb26f"
-  let g:terminal_color_4 =  "#6fc2ef"
-  let g:terminal_color_5 =  "#e1a3ee"
-  let g:terminal_color_6 =  "#12cfc0"
-  let g:terminal_color_7 =  "#d0d0d0"
-  let g:terminal_color_8 =  "#505050"
-  let g:terminal_color_9 =  "#eda987"
-  let g:terminal_color_10 = "#202020"
-  let g:terminal_color_11 = "#303030"
-  let g:terminal_color_12 = "#b0b0b0"
-  let g:terminal_color_13 = "#e0e0e0"
-  let g:terminal_color_14 = "#deaf8f"
-  let g:terminal_color_15 = "#f5f5f5"
+  let g:terminal_color_0 =  "#1B2B34"
+  let g:terminal_color_1 =  "#EC5f67"
+  let g:terminal_color_2 =  "#99C794"
+  let g:terminal_color_3 =  "#FAC863"
+  let g:terminal_color_4 =  "#6699CC"
+  let g:terminal_color_5 =  "#C594C5"
+  let g:terminal_color_6 =  "#5FB3B3"
+  let g:terminal_color_7 =  "#C0C5CE"
+  let g:terminal_color_8 =  "#65737E"
+  let g:terminal_color_9 =  "#F99157"
+  let g:terminal_color_10 = "#343D46"
+  let g:terminal_color_11 = "#4F5B66"
+  let g:terminal_color_12 = "#A7ADBA"
+  let g:terminal_color_13 = "#CDD3DE"
+  let g:terminal_color_14 = "#AB7967"
+  let g:terminal_color_15 = "#D8DEE9"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
   if &background == "light"
@@ -88,7 +94,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-chalk"
+let g:colors_name = "base16-oceanicnext"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
@@ -141,21 +147,21 @@ call <sid>hi("Title",         s:gui0D, "", s:cterm0D, "", "none", "")
 call <sid>hi("Conceal",       s:gui0D, s:gui00, s:cterm0D, s:cterm00, "", "")
 call <sid>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "", "")
 call <sid>hi("NonText",       s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
+call <sid>hi("LineNr",        s:gui03, s:gui00, s:cterm03, s:cterm00, "", "")
 call <sid>hi("SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
-call <sid>hi("StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none", "")
-call <sid>hi("StatusLineNC",  s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
-call <sid>hi("VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none", "")
+call <sid>hi("StatusLine",    s:gui04, s:gui00, s:cterm04, s:cterm00, "none", "")
+call <sid>hi("StatusLineNC",  s:gui02, s:gui00, s:cterm02, s:cterm00, "none", "")
+call <sid>hi("VertSplit",     s:gui01, s:gui01, s:cterm01, s:cterm01, "none", "")
 call <sid>hi("ColorColumn",   "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none", "")
-call <sid>hi("CursorLineNr",  s:gui04, s:gui01, s:cterm04, s:cterm01, "", "")
+call <sid>hi("CursorLineNr",  s:gui04, s:gui00, s:cterm04, s:cterm00, "", "")
 call <sid>hi("QuickFixLine",  "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("PMenu",         s:gui05, s:gui01, s:cterm05, s:cterm01, "none", "")
 call <sid>hi("PMenuSel",      s:gui01, s:gui05, s:cterm01, s:cterm05, "", "")
 call <sid>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
 call <sid>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
-call <sid>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none", "")
+call <sid>hi("TabLineSel",    s:gui0B, s:gui00, s:cterm0B, s:cterm00, "none", "")
 
 " Standard syntax highlighting
 call <sid>hi("Boolean",      s:gui09, "", s:cterm09, "", "", "")
@@ -226,17 +232,17 @@ call <sid>hi("gitcommitHeader",         s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("gitcommitSelectedType",   s:gui0D, "", s:cterm0D, "", "", "")
 call <sid>hi("gitcommitUnmergedType",   s:gui0D, "", s:cterm0D, "", "", "")
 call <sid>hi("gitcommitDiscardedType",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("gitcommitBranch",         s:gui09, "", s:cterm09, "", "bold", "")
+call <sid>hi("gitcommitBranch",         s:gui09, "", s:cterm09, "", "", "")
 call <sid>hi("gitcommitUntrackedFile",  s:gui0A, "", s:cterm0A, "", "", "")
-call <sid>hi("gitcommitUnmergedFile",   s:gui08, "", s:cterm08, "", "bold", "")
-call <sid>hi("gitcommitDiscardedFile",  s:gui08, "", s:cterm08, "", "bold", "")
-call <sid>hi("gitcommitSelectedFile",   s:gui0B, "", s:cterm0B, "", "bold", "")
+call <sid>hi("gitcommitUnmergedFile",   s:gui08, "", s:cterm08, "", "", "")
+call <sid>hi("gitcommitDiscardedFile",  s:gui08, "", s:cterm08, "", "", "")
+call <sid>hi("gitcommitSelectedFile",   s:gui0B, "", s:cterm0B, "", "", "")
 
 " GitGutter highlighting
-call <sid>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "", "")
-call <sid>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "", "")
-call <sid>hi("GitGutterDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "", "")
-call <sid>hi("GitGutterChangeDelete",  s:gui0E, s:gui01, s:cterm0E, s:cterm01, "", "")
+call <sid>hi("GitGutterAdd",     s:gui0B, s:gui00, s:cterm0B, s:cterm00, "", "")
+call <sid>hi("GitGutterChange",  s:gui0D, s:gui00, s:cterm0D, s:cterm00, "", "")
+call <sid>hi("GitGutterDelete",  s:gui08, s:gui00, s:cterm08, s:cterm00, "", "")
+call <sid>hi("GitGutterChangeDelete",  s:gui0E, s:gui00, s:cterm0E, s:cterm00, "", "")
 
 " HTML highlighting
 call <sid>hi("htmlBold",    s:gui0A, "", s:cterm0A, "", "", "")
@@ -321,6 +327,16 @@ call <sid>hi("SpellBad",     "", s:gui00, "", s:cterm00, "undercurl", s:gui08)
 call <sid>hi("SpellLocal",   "", s:gui00, "", s:cterm00, "undercurl", s:gui0C)
 call <sid>hi("SpellCap",     "", s:gui00, "", s:cterm00, "undercurl", s:gui0D)
 call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl", s:gui0E)
+
+" lightergrey additions:
+
+" Ale highlighting
+" fg bg fg bg
+call <sid>hi("ALEErrorSign",   s:gui08, s:gui00, s:cterm08, s:cterm00, "", "")
+call <sid>hi("ALEWarningSign", s:gui0A, s:gui00, s:cterm01, s:cterm00, "", "")
+
+" UI stuff
+call <sid>hi("EndOfBuffer",   s:gui00, s:gui00, s:cterm00, s:cterm00, "", "")
 
 " Remove functions
 delf <sid>hi
