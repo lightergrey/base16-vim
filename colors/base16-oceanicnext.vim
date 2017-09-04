@@ -101,7 +101,7 @@ call <sid>hi("StatusLineNC",               s:gui_black,   s:gui_dark_3,  "none",
 call <sid>hi("VertSplit",                  s:gui_dark_3,  s:gui_dark_3,  "none",      "")
 call <sid>hi("ColorColumn",                "",            s:gui_dark_3,  "none",      "")
 call <sid>hi("CursorColumn",               "",            s:gui_dark_3,  "none",      "")
-call <sid>hi("CursorLine",                 "",            s:gui_dark_3,  "none",      "")
+call <sid>hi("CursorLine",                 "",            s:gui_black,   "bold",      "")
 call <sid>hi("CursorLineNr",               s:gui_light_1, s:gui_black,   "",          "")
 call <sid>hi("QuickFixLine",               "",            s:gui_dark_3,  "none",      "")
 call <sid>hi("PMenu",                      s:gui_white,   s:gui_dark_3,  "none",      "")
