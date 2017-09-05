@@ -83,7 +83,7 @@ call <sid>hi("ModeMsg",                    s:gui_green,   "",            "",    
 call <sid>hi("MoreMsg",                    s:gui_green,   "",            "",          "")
 call <sid>hi("Question",                   s:gui_blue,    "",            "",          "")
 call <sid>hi("Search",                     s:gui_dark_3,  s:gui_yellow,  "",          "")
-call <sid>hi("SpecialKey",                 s:gui_dark_3,  "",            "",          "")
+call <sid>hi("SpecialKey",                 s:gui_dark_2,  "",            "",          "")
 call <sid>hi("TooLong",                    s:gui_red,     "",            "",          "")
 call <sid>hi("Underlined",                 s:gui_red,     "",            "",          "")
 call <sid>hi("Visual",                     "",            s:gui_dark_2,  "",          "")
