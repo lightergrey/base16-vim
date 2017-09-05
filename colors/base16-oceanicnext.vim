@@ -8,7 +8,7 @@
 let s:gui_black   = "#1B2B34"
 let s:gui_dark_3  = "#343D46"
 let s:gui_dark_2  = "#4F5B66"
-let s:gui_dark_3  = "#65737E"
+let s:gui_dark_1  = "#65737E"
 let s:gui_light_1 = "#A7ADBA"
 let s:gui_light_2 = "#C0C5CE"
 let s:gui_light_3 = "#CDD3DE"
@@ -94,26 +94,26 @@ call <sid>hi("Title",                      s:gui_blue,    "",            "none",
 call <sid>hi("Conceal",                    s:gui_dark_3,  s:gui_black,   "",          "")
 call <sid>hi("Cursor",                     s:gui_black,   s:gui_light_2, "",          "")
 call <sid>hi("NonText",                    s:gui_dark_3,  "",            "",          "")
-call <sid>hi("LineNr",                     s:gui_dark_3,  s:gui_black,   "",          "")
+call <sid>hi("LineNr",                     s:gui_dark_2,  s:gui_black,   "",          "")
 call <sid>hi("SignColumn",                 s:gui_dark_3,  s:gui_dark_3,  "",          "")
-call <sid>hi("StatusLine",                 s:gui_white,   s:gui_black,   "bold",      "")
-call <sid>hi("StatusLineNC",               s:gui_black,   s:gui_dark_3,  "none",      "")
+call <sid>hi("StatusLine",                 s:gui_white,   s:gui_dark_3,  "bold",      "")
+call <sid>hi("StatusLineNC",               s:gui_dark_1,  s:gui_dark_3,  "none",      "")
 call <sid>hi("VertSplit",                  s:gui_dark_3,  s:gui_dark_3,  "none",      "")
 call <sid>hi("ColorColumn",                "",            s:gui_dark_3,  "none",      "")
 call <sid>hi("CursorColumn",               "",            s:gui_dark_3,  "none",      "")
-call <sid>hi("CursorLine",                 "",            s:gui_black,   "bold",      "")
+call <sid>hi("CursorLine",                 "",            s:gui_dark_3,  "bold",      "")
 call <sid>hi("CursorLineNr",               s:gui_light_1, s:gui_black,   "",          "")
 call <sid>hi("QuickFixLine",               "",            s:gui_dark_3,  "none",      "")
 call <sid>hi("PMenu",                      s:gui_white,   s:gui_dark_3,  "none",      "")
 call <sid>hi("PMenuSel",                   s:gui_black,   s:gui_light_3, "",          "")
-call <sid>hi("TabLine",                    s:gui_black,   s:gui_dark_3,  "none",      "")
+call <sid>hi("TabLine",                    s:gui_dark_1,  s:gui_dark_3,  "none",      "")
 call <sid>hi("TabLineFill",                s:gui_dark_3,  s:gui_dark_3,  "none",      "")
 call <sid>hi("TabLineSel",                 s:gui_white,   s:gui_black,   "bold",      "")
 
 " Standard syntax highlighting
 call <sid>hi("Boolean",                    s:gui_orange,  "",            "",          "")
 call <sid>hi("Character",                  s:gui_red,     "",            "",          "")
-call <sid>hi("Comment",                    s:gui_dark_3,  "",            "",          "")
+call <sid>hi("Comment",                    s:gui_dark_1,  "",            "",          "")
 call <sid>hi("Conditional",                s:gui_purple,  "",            "",          "")
 call <sid>hi("Constant",                   s:gui_orange,  "",            "",          "")
 call <sid>hi("Define",                     s:gui_purple,  "",            "none",      "")
